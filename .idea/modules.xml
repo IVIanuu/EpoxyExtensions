@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/EpoxyExtensions.iml" filepath="$PROJECT_DIR$/EpoxyExtensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/buildSrc/buildSrc.iml" filepath="$PROJECT_DIR$/buildSrc/buildSrc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/epoxyextensions/epoxyextensions.iml" filepath="$PROJECT_DIR$/epoxyextensions/epoxyextensions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/epoxyextensions-annotations/epoxyextensions-annotations.iml" filepath="$PROJECT_DIR$/epoxyextensions-annotations/epoxyextensions-annotations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/epoxyextensions-processor/epoxyextensions-processor.iml" filepath="$PROJECT_DIR$/epoxyextensions-processor/epoxyextensions-processor.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sample/sample.iml" filepath="$PROJECT_DIR$/sample/sample.iml" />
+    </modules>
+  </component>
+</project>
