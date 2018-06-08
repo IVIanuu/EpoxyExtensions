@@ -36,7 +36,7 @@ class EpoxyExtGenerator(val descriptor: EpoxyExtDescriptor) {
             .receiver(EPOXY_CONTROLLER)
 
         descriptor.constructorParams
-            .forEachIndexed { index, typeName ->  function.addParameter("_" +index.toString(), typeName)}
+            .forEach { function.addParameter(it.first, it.second) }
 
         function.addParameter(
             "initializer",
@@ -46,13 +46,9 @@ class EpoxyExtGenerator(val descriptor: EpoxyExtDescriptor) {
             )
         )
 
-        // todo make this prettier
-        val constructorString = if (descriptor.constructorParams.isNotEmpty()) {
-            descriptor.constructorParams.mapIndexed { index, _ -> "_$index" }
-                .joinToString(", ")
-        } else {
-            ""
-        }
+        val constructorString = descriptor.constructorParams
+            .map(Pair<String, TypeName>::first)
+            .joinToString(",")
 
         function.addCode(
             CodeBlock.builder()

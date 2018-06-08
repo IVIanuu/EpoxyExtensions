@@ -69,10 +69,9 @@ class EpoxyExtProcessingStep(private val processingEnv: ProcessingEnvironment) :
         val constructorParams =
             element.enclosedElements
                 .filterIsInstance<ExecutableElement>()
-                .firstOrNull { it.kind == ElementKind.CONSTRUCTOR }
-                ?.parameters
-                ?.map { it.javaToKotlinType() }
-                    ?: emptyList()
+                .first { it.kind == ElementKind.CONSTRUCTOR }
+                .parameters
+                .map { it.simpleName.toString() to it.javaToKotlinType() }
 
         var initName= CaseFormat.UPPER_CAMEL.converterTo(
             CaseFormat.LOWER_CAMEL)

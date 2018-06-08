@@ -1,7 +1,7 @@
 package com.ivianuu.epoxyextensions.sample
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.airbnb.epoxy.*
 
@@ -12,15 +12,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         object : EpoxyController() {
             override fun buildModels() {
-                finalEpoxy {
-                }
             }
         }
     }
 }
 
 @EpoxyModelClass(layout = R.layout.abc_action_menu_layout)
-abstract class FinalEpoxyModel : MyEpoxyModelBaseClass5() {
+abstract class FinalEpoxyModel(val param1: String, val param2: Boolean?, val param3: Int?, val param4: Long) : MyEpoxyModelBaseClass5() {
     @EpoxyAttribute var finalAttribute = ""
 }
 

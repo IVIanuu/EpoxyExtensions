@@ -29,5 +29,5 @@ data class EpoxyExtDescriptor(
     val fileName: ClassName,
     val builderName: ClassName,
     val modelName: ClassName,
-    val constructorParams: List<TypeName>
+    val constructorParams: List<Pair<String, TypeName>>
 )
